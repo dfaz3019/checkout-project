@@ -139,8 +139,6 @@ a:hover {
     background-color: gold;
 }
 
-
-
 /* some responsive css */
 @media screen and (max-width: 850px) {
     .cart {
