@@ -114,7 +114,7 @@ a:hover {
     font-weight: bold;
 }
 
-/* example of selecting different HTML elements with adding extra classes or IDs */
+/* example of selecting different HTML elements without adding extra classes or IDs */
 .cart div:nth-child(1){
     background-color: pink;
 }
