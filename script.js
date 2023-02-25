@@ -28,16 +28,24 @@ const confirmAddressButton = document.querySelector('#confirm-address-button')
 //     } else {
 //         confirmAddressButton.disabled = false;
 //     }
-    
+
 // })    
 
-fullName.addEventListener("blur", () => {
-    if(fullName.value === ""){
+fullName.addEventListener("input", () => {
+    if (fullName.value === "") {
         confirmAddressButton.disabled = true;
+
     } else {
         confirmAddressButton.disabled = false;
     }
-    document.querySelector(".nameError").classList.toggle("hide");
+})
+
+fullName.addEventListener("blur", () => {
+    if (fullName.value == "") {
+        document.querySelector(".nameError").classList.add("hide");
+    } else {
+        document.querySelector(".nameError").classList.remove("hide");
+    }
 })
 
 document.querySelector('#confirm-address-button').addEventListener('click', (e) => {
