@@ -27,14 +27,11 @@ body {
 }
 
 #checkout-cart {
-    /* border: 2px solid black; */
     width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-#checkout-cart {
     border-bottom: 2px dotted black;
+
 }
 
 .cart {
@@ -57,6 +54,10 @@ body {
     border: 2px solid black;
 }
 
-h3 {
+#pay-section {
+    width: 800px;
     border: 2px solid black;
+    margin: 0 auto;
+    height: 500px;
 }
+
