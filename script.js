@@ -12,9 +12,6 @@ const quantityFieldFour = document.querySelector('.quantity-field-4')
 const quantityFieldFive = document.querySelector('.quantity-field-5')
 const quantityFieldSix = document.querySelector('.quantity-field-6')
 
-const checkIfNegative = -1
-
-
 document.querySelector('#calculate-button').addEventListener('click', () => {
     if(Number(quantityFieldOne.value) == -1) {
         alert('Please select a positive value quantity')
