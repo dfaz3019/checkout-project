@@ -25,18 +25,18 @@ document.querySelector('#confirm-address-button').addEventListener('click', () =
 })
 
 document.querySelector('.text-box-name').addEventListener('mouseenter', () => {
-    document.querySelector('.text-box-one').style.backgroundColor = 'lightgray'
+    document.querySelector('.text-box-name').style.backgroundColor = 'lightgray'
 })
 
 document.querySelector('.text-box-name').addEventListener('mouseleave', () => {
-    document.querySelector('.text-box-one').style.backgroundColor = 'white'
+    document.querySelector('.text-box-name').style.backgroundColor = 'white'
 })
 
 document.querySelector('.text-box-address').addEventListener('mouseenter', () => {
-    document.querySelector('.text-box-two').style.backgroundColor = 'lightgray'
+    document.querySelector('.text-box-address').style.backgroundColor = 'lightgray'
 })
 
 document.querySelector('.text-box-address').addEventListener('mouseleave', () => {
-    document.querySelector('.text-box-two').style.backgroundColor = 'white'
+    document.querySelector('.text-box-address').style.backgroundColor = 'white'
 })
 
