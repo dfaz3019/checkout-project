@@ -60,3 +60,10 @@ body {
 h3 {
     border: 2px solid black;
 }
+
+/* some responsive css */
+@media screen and (max-width: 850px) {
+    .cart {
+        grid-template-columns: 1fr;
+    }
+}
