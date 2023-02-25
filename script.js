@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         confirmAddressButton.disabled = false;
     }
-})
+})    
 
 document.querySelector('#confirm-address-button').addEventListener('click', (e) => {
     e.preventDefault()
