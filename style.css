@@ -100,6 +100,10 @@ a:hover {
     text-align: center;
 }
 
+.text-box-name .text-box-address:hover {
+    background-colour: lightgray;
+}
+
 /* some responsive css */
 @media screen and (max-width: 850px) {
     .cart {
