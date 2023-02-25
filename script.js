@@ -47,9 +47,9 @@ function calculatePrice (quantityField, cost) {
 calculateButton.addEventListener('click', () => {
     const cartTotalLabel = document.querySelector('.cart-total')
     cartTotal = 
-    `Total: $${calculatePrice(quantityFieldOne, 18.52) + calculatePrice(quantityFieldTwo, 15.00) + 
+    `Total: $${Math.round(calculatePrice(quantityFieldOne, 18.52) + calculatePrice(quantityFieldTwo, 15.00) + 
      calculatePrice(quantityFieldThree, 31.52) + calculatePrice(quantityFieldFour, 9.82) + 
-     calculatePrice(quantityFieldFive, 14.82) + calculatePrice(quantityFieldSix, 6.82)}`
+     calculatePrice(quantityFieldFive, 14.82) + calculatePrice(quantityFieldSix, 6.82))}`
      cartTotalLabel.innerHTML = cartTotal
 })
 
