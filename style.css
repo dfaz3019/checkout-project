@@ -30,6 +30,14 @@ p {
     width: 505px;
 }
 
+a {
+    padding: 5px;
+}
+
+a:hover {
+    background-color: rgb(51, 51, 51, 0.25);
+}
+
 #checkout-cart {
     width: 800px;
     margin: 0 auto;
