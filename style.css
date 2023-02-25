@@ -27,11 +27,14 @@ body {
 }
 
 #checkout-cart {
+    /* border: 2px solid black; */
     width: 800px;
     margin: 0 auto;
     padding: 20px;
-    border-bottom: 2px dotted black;
+}
 
+#checkout-cart {
+    border-bottom: 2px dotted black;
 }
 
 .cart {
@@ -54,10 +57,9 @@ body {
     border: 2px solid black;
 }
 
-#pay-section {
-    width: 800px;
-    border: 2px solid black;
-    margin: 0 auto;
-    height: 500px;
+/* some responsive css */
+@media screen and (max-width: 850px) {
+    .cart {
+        grid-template-columns: 1fr;
+    }
 }
-
