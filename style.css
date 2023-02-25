@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color:rgba(15, 15, 15, 0.5)
 }
 
 #header-container {
@@ -32,10 +33,30 @@ body {
     padding: 20px;
 }
 
+#checkout-cart {
+    border-bottom: 2px dotted black;
+}
+
 .cart {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    height: 500px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    gap: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(211, 211, 211, 0.575);
+}
+
+.items {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: lightgray;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+h3 {
     border: 2px solid black;
 }
