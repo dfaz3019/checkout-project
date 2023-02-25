@@ -1,10 +1,3 @@
-// const grabField = document.querySelector('.wow-time')
-
-// document.querySelector('#calculate-button').addEventListener('click', () => {
-//     document.querySelector('.cart-total').value = grabField.value * 15
-// })
-
-
 const quantityFieldOne = document.querySelector('.quantity-field-1')
 const quantityFieldTwo = document.querySelector('.quantity-field-2')
 const quantityFieldThree = document.querySelector('.quantity-field-3')
@@ -31,11 +24,19 @@ document.querySelector('#confirm-address-button').addEventListener('click', () =
     const confirmationLabel = document.querySelector('.address-confirmation-message').innerHTML = confirmAddress
 })
 
-document.querySelector('.text-box').addEventListener('mouseenter', () => {
-    document.querySelector('.text-box').style.backgroundColor = 'lightgray'
+document.querySelector('.text-box-name').addEventListener('mouseenter', () => {
+    document.querySelector('.text-box-one').style.backgroundColor = 'lightgray'
 })
 
-document.querySelector('.text-box').addEventListener('mouseleave', () => {
-    document.querySelector('.text-box').style.backgroundColor = 'white'
+document.querySelector('.text-box-name').addEventListener('mouseleave', () => {
+    document.querySelector('.text-box-one').style.backgroundColor = 'white'
+})
+
+document.querySelector('.text-box-address').addEventListener('mouseenter', () => {
+    document.querySelector('.text-box-two').style.backgroundColor = 'lightgray'
+})
+
+document.querySelector('.text-box-address').addEventListener('mouseleave', () => {
+    document.querySelector('.text-box-two').style.backgroundColor = 'white'
 })
 
