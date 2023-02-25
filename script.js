@@ -22,22 +22,14 @@ const fieldShippingDetails = document.querySelector('.shipping-details')
 const calculateButton = document.querySelector('#calculate-button')
 const confirmAddressButton = document.querySelector('#confirm-address-button')
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (fullName.value === "") {
-//         confirmAddressButton.disabled = true;
-//     } else {
-//         confirmAddressButton.disabled = false;
-//     }
-// })    
-
-fullName.addEventListener("blur", () => {
+document.addEventListener('DOMContentLoaded', () => {
     if (fullName.value === "") {
         confirmAddressButton.disabled = true;
     } else {
         confirmAddressButton.disabled = false;
     }
     document.querySelector(".nameError").classList.toggle("hide");
-})
+})    
 
 document.querySelector('#confirm-address-button').addEventListener('click', (e) => {
     e.preventDefault()
