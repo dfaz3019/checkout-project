@@ -14,7 +14,6 @@ document.querySelector('#calculate-button').addEventListener('click', () => {
         document.querySelector('.cart-total').append(`Total is: $${Math.round(quantityFieldOne.value * 18.52 * 100) / 100}`)
     }
 })
-
 const fullName = document.querySelector('.text-box-name')
 const address = document.querySelector('.text-box-address')
 const country = document.querySelector('.country-dropdown-menu')

@@ -114,6 +114,33 @@ a:hover {
     font-weight: bold;
 }
 
+/* example of selecting different HTML elements with adding extra classes or IDs */
+.cart div:nth-child(1){
+    background-color: pink;
+}
+
+.cart div:nth-child(2){
+    background-color: violet;
+}
+
+.cart div:nth-child(3){
+    background-color: orange;
+}
+
+.cart div:nth-child(4){
+    background-color: cyan;
+}
+
+.cart div:nth-child(5){
+    background-color: antiquewhite;
+}
+
+.cart div:nth-child(6){
+    background-color: gold;
+}
+
+
+
 /* some responsive css */
 @media screen and (max-width: 850px) {
     .cart {
