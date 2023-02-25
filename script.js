@@ -36,6 +36,7 @@ fullName.addEventListener("blur", () => {
     } else {
         confirmAddressButton.disabled = false;
     }
+    document.querySelector(".nameError").classList.toggle("hide");
 })
 
 document.querySelector('#confirm-address-button').addEventListener('click', (e) => {

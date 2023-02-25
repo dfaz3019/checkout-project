@@ -104,6 +104,15 @@ a:hover {
     background-colour: lightgray;
 }
 
+.hide {
+    display: none;
+}
+
+.error {
+    color: rgb(192, 40, 40);
+    font-weight: bold;
+}
+
 /* some responsive css */
 @media screen and (max-width: 850px) {
     .cart {
