@@ -41,7 +41,7 @@ fullName.addEventListener("input", () => {
 })
 
 fullName.addEventListener("blur", () => {
-    if (fullName.value == "") {
+    if (!fullName.value == "") {
         document.querySelector(".nameError").classList.add("hide");
     } else {
         document.querySelector(".nameError").classList.remove("hide");
