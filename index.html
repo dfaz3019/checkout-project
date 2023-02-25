@@ -21,7 +21,7 @@
 
         <main id="checkout-cart">
             <div class="cart">
-                <div class="items item-01">WoW Game Time: $15/month<p><input type="number" class="quantity-field quantity-field-1" value="0"></p></div>
+                <div class="items item-01">WoW Game Time: $18.52/month<p><input type="number" class="quantity-field quantity-field-1" value="0"></p></div>
                 <div class="items item-02">Basketball Shoes: $15/month<p><input type="number" class="quantity-field  quantity-field-2" value="0"></p></div>
                 <div class="items item-03">Piano: $15/month <p><input type="number" class="quantity-field quantity-field-3" value="0"></p></div>
                 <div class="items item-04">Coffee Cup: $15/month <p><input type="number" class="quantity-field quantity-field-4" value="0"></p></div>
@@ -36,7 +36,19 @@
                 <p>Please check cart and confirm total</p>
                 <p><label class="cart-total">Total: </label></p>
                 <p><button id="calculate-button">Calculate Total</button></button></p></div>
-                <div class="confirm-items">1</div>
+                <div class="shipping-details">
+                    <h3>Shipping Details:</h3>
+                    <p>Please enter your full name: <input type="text" class="name"></p>
+                    <p>Please enter your address: <input type="text" class="address"></p>
+                    <p>Enter your country:</p>
+                    <select name="country" class="country-dropdown-menu">
+                        <option value="Australia">Australia</option>
+                        <option value="New-Zealand">New Zealand</option>
+                    </select>
+                    <label class="address-confirmation-message"></label>
+                    <p><button id="confirm-address-button">Save Address</button></p>
+                </div>
+                     
             </div>
         </div>
     </body>

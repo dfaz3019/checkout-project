@@ -21,3 +21,12 @@ document.querySelector('#calculate-button').addEventListener('click', () => {
     }
 })
 
+const fullName = document.querySelector('.name')
+const address = document.querySelector('.address')
+const country = document.querySelector('.country-dropdown-menu')
+const fieldShippingDetails = document.querySelector('.shipping-details')
+
+document.querySelector('#confirm-address-button').addEventListener('click', () => {
+const confirmAddress = `<p>We will send this package to ${fullName.value} at ${address.value}, ${country.value}</p>`
+const confirmationLabel = document.querySelector('.address-confirmation-message').innerHTML = confirmAddress
+})
