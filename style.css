@@ -13,6 +13,18 @@ p {
     line-height: 30px;
 }
 
+#clock-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 2px dotted black;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+}
+
 #header-container {
     width: 800px;
     margin: 0 auto;
@@ -86,6 +98,11 @@ a:hover {
     border-radius: 20px;
 }
 
+.text-box-name, .text-box-address {
+    height: 25px;
+    background-color: rgba(187, 190, 2, 0.671)
+}
+
 .confirm-payment {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -100,8 +117,8 @@ a:hover {
     text-align: center;
 }
 
-.text-box-name .text-box-address:hover {
-    background-colour: lightgray;
+.text-box-name:hover, .text-box-address:hover {
+    background-color: lightgray;
 }
 
 .hide {

@@ -11,6 +11,21 @@ const fieldShippingDetails = document.querySelector('.shipping-details')
 const calculateButton = document.querySelector('#calculate-button')
 const confirmAddressButton = document.querySelector('#confirm-address-button')
 const resetCart = document.querySelector('#reset-cart')
+const shippingBreakdown = document.querySelector('.shipping-breakdown')
+const clock = document.querySelector('.clock')
+
+
+setInterval(updateTime, 1000)
+
+function updateTime() {
+    const time = new Date()
+    const getHours = time.getHours()
+    const getMinutes = time.getMinutes()
+    const getSeconds = time.getSeconds()
+
+    clock.innerHTML = `Time is: ${getHours}:${getMinutes}:${getSeconds}`
+}
+
 
 fullName.addEventListener("input", () => {
     if (fullName.value === "") {
@@ -44,13 +59,19 @@ function calculatePrice (quantityField, cost) {
     }
 }
 
+function getValueAsInt (quantityField) {
+    return parseInt(quantityField, 10)
+}
+
 calculateButton.addEventListener('click', () => {
     const cartTotalLabel = document.querySelector('.cart-total')
     cartTotal = 
-    `Total: $${Math.round(calculatePrice(quantityFieldOne, 18.52) + calculatePrice(quantityFieldTwo, 15.00) + 
+    `Total: $${(calculatePrice(quantityFieldOne, 18.52) + calculatePrice(quantityFieldTwo, 15.00) + 
      calculatePrice(quantityFieldThree, 31.52) + calculatePrice(quantityFieldFour, 9.82) + 
-     calculatePrice(quantityFieldFive, 14.82) + calculatePrice(quantityFieldSix, 6.82))}`
+     calculatePrice(quantityFieldFive, 14.82) + calculatePrice(quantityFieldSix, 6.82)).toFixed(2)}`
      cartTotalLabel.innerHTML = cartTotal
+     shippingBreakdown.innerHTML = `Item Quantity: ${getValueAsInt(quantityFieldOne.value) + getValueAsInt(quantityFieldTwo.value) + getValueAsInt(quantityFieldThree.value) +
+        getValueAsInt(quantityFieldFour.value) + getValueAsInt(quantityFieldFive.value) + getValueAsInt(quantityFieldSix.value)}<br>`
 })
 
 resetCart.addEventListener('click', () => {
