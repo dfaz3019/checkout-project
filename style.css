@@ -14,15 +14,28 @@ p {
 }
 
 #clock-container {
-    width: 800px;
+    width: 250px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 2px dotted black;
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8em;
+    color: rgb(133, 132, 132);
 }
 
 .clock {
     display: flex;
     justify-content: center;
+    color: lightgray;
+    line-height: 2;
+    margin-top: 5px;
 }
 
 #header-container {
@@ -33,7 +46,7 @@ p {
 }
 
 .header {
-    display: inline-flex
+    display: inline-flex;
 }
 
 #navigation-bar {
@@ -70,6 +83,7 @@ a:hover {
     border-radius: 20px;
     padding: 20px;
     background-color: rgba(211, 211, 211, 0.575);
+    margin-bottom: 20px;
 }
 
 .items {

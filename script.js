@@ -14,6 +14,14 @@ const resetCart = document.querySelector('#reset-cart')
 const shippingBreakdown = document.querySelector('.shipping-breakdown')
 const clock = document.querySelector('.clock')
 
+document.addEventListener('DOMContentLoaded', () => {
+    const date = new Date()
+    day = date.getDay()
+    month = date.getMonth()
+    date.toDateString
+
+    document.querySelector('.date').textContent = date.toDateString()
+})
 
 setInterval(updateTime, 1000)
 
@@ -21,9 +29,14 @@ function updateTime() {
     const time = new Date()
     const getHours = time.getHours()
     const getMinutes = time.getMinutes()
-    const getSeconds = time.getSeconds()
+    var getSeconds = time.getSeconds()
 
-    clock.innerHTML = `Time is: ${getHours}:${getMinutes}:${getSeconds}`
+    if (time.getSeconds() < 10) {
+
+        var getSeconds = '0'+time.getSeconds()
+    }
+
+    clock.innerHTML = `${getHours}:${getMinutes}:${getSeconds}`
 }
 
 
