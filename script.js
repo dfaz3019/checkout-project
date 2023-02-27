@@ -146,9 +146,7 @@ function GetMap()
     Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
 
     function pushpinClicked(e) {
-        //Make sure the infobox has metadata to display.
         if (e.target.metadata) {
-            //Set the infobox options with the metadata of the pushpin.
             infobox.setOptions({
                 location: e.target.getLocation(),
                 title: e.target.metadata.title,
