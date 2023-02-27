@@ -13,6 +13,7 @@ const confirmAddressButton = document.querySelector('#confirm-address-button')
 const resetCart = document.querySelector('#reset-cart')
 const shippingBreakdown = document.querySelector('.shipping-breakdown')
 const clock = document.querySelector('.clock')
+let apiKey = 'Ap7mbRfhsD5lRt_3M22qSk-FpNb3GTLcZwTN5R3kKFPf6K6uiRGD8lvS8DXEe4SQ'
 
 /*DATE AND CLOCK*/
 
@@ -107,3 +108,54 @@ resetCart.addEventListener('click', () => {
     quantityFieldFive.value = 0 
     quantityFieldSix.value = 0 
 })
+
+/* MAP */
+
+function GetMap()
+
+   {
+    var map = new Microsoft.Maps.Map('#myMap', {
+        credentials: apiKey,
+        center: new Microsoft.Maps.Location(-33.811889, 151.0245449),
+        mapTypeId: Microsoft.Maps.MapTypeId.road,
+        zoom: 17,
+        disableScrollWheelZoom: true,
+        disablePanning: true
+    });
+
+    var uniLocation = new Microsoft.Maps.Location(-33.811889, 151.0245449)
+    
+    var pin = new Microsoft.Maps.Pushpin(uniLocation, {
+        title: 'Western Sydney University',
+        subTitle: 'WAT',
+    });
+
+    map.entities.push(pin);
+
+    infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+        visible: false
+    });
+
+    infobox.setMap(map);
+
+    pin.metadata = {
+        title: 'Western Sydney University',
+        description: `Where we'll be for computer science [h]`
+    };
+
+    Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+
+    function pushpinClicked(e) {
+        //Make sure the infobox has metadata to display.
+        if (e.target.metadata) {
+            //Set the infobox options with the metadata of the pushpin.
+            infobox.setOptions({
+                location: e.target.getLocation(),
+                title: e.target.metadata.title,
+                description: e.target.metadata.description,
+                visible: true
+            });
+
+        }
+    }
+}
