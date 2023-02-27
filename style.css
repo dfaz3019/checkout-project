@@ -17,7 +17,6 @@ p {
     width: 250px;
     margin: 0 auto;
     padding: 10px;
-    border-bottom: 2px dotted black;
     background-color: rgba(0, 0, 0, 0.486);
     border-radius: 20px;
     margin-top: 20px;
@@ -149,8 +148,6 @@ a:hover {
     height: 500px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 20px;
-    border-bottom: 2px dotted black;
 }
 
 #myMap {

@@ -13,6 +13,7 @@ const confirmAddressButton = document.querySelector('#confirm-address-button')
 const resetCart = document.querySelector('#reset-cart')
 const shippingBreakdown = document.querySelector('.shipping-breakdown')
 const clock = document.querySelector('.clock')
+const paySection = document.querySelector('#pay-section')
 let apiKey = 'Ap7mbRfhsD5lRt_3M22qSk-FpNb3GTLcZwTN5R3kKFPf6K6uiRGD8lvS8DXEe4SQ'
 
 /*DATE AND CLOCK*/
@@ -68,6 +69,7 @@ fullName.addEventListener("blur", () => {
 
 confirmAddressButton.addEventListener('click', (e) => {
     e.preventDefault()
+    paySection.style.height = '450px'
     const confirmAddress = `<p>We will send this package to ${fullName.value} at ${address.value}, ${country.value}</p>`
     const confirmationLabel = document.querySelector('.address-confirmation-message').innerHTML = confirmAddress
 })
