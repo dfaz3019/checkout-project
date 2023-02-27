@@ -14,6 +14,8 @@ const resetCart = document.querySelector('#reset-cart')
 const shippingBreakdown = document.querySelector('.shipping-breakdown')
 const clock = document.querySelector('.clock')
 
+/*DATE AND CLOCK*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const date = new Date()
     day = date.getDay()
@@ -28,7 +30,7 @@ setInterval(updateTime, 1000)
 function updateTime() {
     const time = new Date()
     const getHours = time.getHours()
-    const getMinutes = time.getMinutes()
+    var getMinutes = time.getMinutes()
     var getSeconds = time.getSeconds()
 
     if (time.getSeconds() < 10) {
@@ -36,9 +38,15 @@ function updateTime() {
         var getSeconds = '0'+time.getSeconds()
     }
 
+    if(time.getMinutes() < 10) {
+        
+        var getMinutes = '0'+time.getMinutes()
+    }
+
     clock.innerHTML = `${getHours}:${getMinutes}:${getSeconds}`
 }
 
+/* FORM VALIDATION FOR ADDRESS FIELDS */
 
 fullName.addEventListener("input", () => {
     if (fullName.value === "") {
@@ -63,6 +71,8 @@ confirmAddressButton.addEventListener('click', (e) => {
     const confirmationLabel = document.querySelector('.address-confirmation-message').innerHTML = confirmAddress
 })
 
+/* PRICE CALCULATOR + ITEM QUANTITY CALCULATOR */
+
 function calculatePrice (quantityField, cost) {
     if (Number(quantityField.value) == -1) {
         alert('Please select a positive value quantity')
@@ -86,6 +96,8 @@ calculateButton.addEventListener('click', () => {
      shippingBreakdown.innerHTML = `Item Quantity: ${getValueAsInt(quantityFieldOne.value) + getValueAsInt(quantityFieldTwo.value) + getValueAsInt(quantityFieldThree.value) +
         getValueAsInt(quantityFieldFour.value) + getValueAsInt(quantityFieldFive.value) + getValueAsInt(quantityFieldSix.value)}<br>`
 })
+
+/* CART RESET BUTTON */
 
 resetCart.addEventListener('click', () => {
     quantityFieldOne.value = 0 
